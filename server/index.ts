@@ -254,9 +254,9 @@ router.get('/score/:rtdbRoomId', (req, res) => {
     });
 });
 
-// router.get('*', (req,res)=>{
-//     res.sendFile(__dirname + '/dist/index.html')
-// })
+router.get('*', (req,res)=>{
+    res.sendFile(__dirname + '/dist/index.html')
+})
 
 myApp.use('/api', router)
 
