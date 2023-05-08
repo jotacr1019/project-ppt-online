@@ -1,0 +1,41 @@
+.root-waiting_room {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    min-width: 375px;
+    height: 100vh;
+    padding: 30px 30px;
+}
+
+@media(min-width: 515px) {
+    .root-waiting_room {
+        height: inherit;
+        gap: 100px;
+        border: solid 4px #000;
+        border-radius: 6px;
+        padding: 20px 10px;
+    }
+}
+
+@media(min-width: 605px) {
+    .root-waiting_room {
+        gap: 95px;
+        padding: 20px 30px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .root-waiting_room {
+        gap: 330px;
+        height: inherit;
+        padding: 15px 95px;
+        border: solid 6px #000;
+        border-radius: 6px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .waiting-info {
+        padding: 15px 95px;
+    }
+}

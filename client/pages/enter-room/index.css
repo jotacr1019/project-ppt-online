@@ -1,0 +1,119 @@
+.initRoom-root {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100vh;
+    min-width: 375px;
+    padding: 20px 30px;
+}
+
+@media(min-width: 510px) {
+    .initRoom-root {
+        height: inherit;
+        padding: 20px 55px;
+        border: solid 4px #000;
+        border-radius: 6px;
+    }
+}
+
+.text-initRoom {
+    display: flex;
+    align-items: center;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.img-initRoom {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+}
+
+@media(min-width: 1150px) {
+    .img-initRoom {
+        visibility: hidden;
+        margin-bottom: 46px;
+    }
+}
+
+.form-room {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+    width: 95%;
+    margin-bottom: 8px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+@media(min-width: 620px) {
+    .form-room {
+        width: 84%;
+        margin-bottom: 0px;
+        margin-top: -10px;
+    }
+}
+
+.input_form-room {
+    font-family: 'Odibee Sans';
+    font-size: 2.2rem;
+    text-align: center;
+    height: 68px;
+    padding: 0 8px;
+    color: var(--color-principal);
+    background-color: #e1f3f0;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+@media(min-width: 620px) {
+    .input_form-room {
+        font-size: 2rem;
+    }
+}
+
+.input_button-room {
+    font-family: 'Odibee Sans';
+    font-size: 2.2rem;
+    height: 70px;
+    color: #fff;
+    background-color: #006CFC;
+    border: none;
+    border-radius: 8px;
+}
+
+@media(min-width: 620px) {
+    .input_button-room {
+        font-size: 2rem;
+    }
+}
+
+.container_no-code {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 7px 20px;
+    border: solid 1px #000;
+    border-radius: 6px;
+}
+
+@media(min-width: 620px) {
+    .container_no-code {
+        align-self: center;
+        width: 84%;
+        background-color: rgb(188, 229, 244);
+        opacity: 0.9;
+    }
+}
+
+.text-info {
+    text-align: center;
+}
+
+@media(min-width: 620px) {
+    .button-info {
+        align-self: center;
+        width: 76%;
+    }
+}

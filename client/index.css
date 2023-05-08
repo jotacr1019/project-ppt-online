@@ -1,0 +1,49 @@
+:root {
+    --color-principal: #0f3e57;
+    --color-perdedor: #DC5B49;
+    --color-perdedor-secundario: #894949E5;
+    --color-ganador: #6CB46C;
+    --color-ganador-secundario: #888949E5;
+    --color-empate: rgb(94, 190, 225);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-family: 'Odibee Sans', cursive;
+    margin: 0;
+    background-color: #e1f3f0;
+    background-image: url(./assets/fondo.png);
+}
+
+@media(min-width: 515px) {
+    body {
+        height: 100vh;
+        padding: 15px 20px;
+        border-right: solid 35px #000;
+        border-left: solid 35px #000;
+    }
+}
+
+@media(min-width: 760px) {
+    body {
+        height: 100vh;
+        padding: 15px 100px;
+        border-right: solid 35px #000;
+        border-left: solid 35px #000;
+    }
+}
+
+@media(min-width: 1150px) {
+    body {
+        height: 100vh;
+        padding: 20px 285px;
+        border-right: solid 35px #000;
+        border-left: solid 35px #000;
+        background-image: url(./assets/wp8121942.png);
+        background-position-y: -110;
+    }
+}

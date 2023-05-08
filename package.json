@@ -1,0 +1,53 @@
+{
+    "name": "project-mod-6",
+    "version": "1.0.0",
+    "description": "",
+    "resolutions": {
+        "parcel-bundler": "^2.0.0 || ^1.12.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "parcel": "parcel serve ./client/index.html --port 1238",
+        "build:front": "parcel build ./client/index.html --dist-dir build --public-url ./",
+        "nodemon": "nodemon --watch './server/index.ts' --exec 'ts-node ./server/index.ts'",
+        "dev": "concurrently --kill-others \"npm run nodemon\" \"npm run parcel\"",
+        "build:api": "tsc ./server/index.ts",
+        "build": "npm run build:front && npm run build:api",
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^18.15.2",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "firebase": "^9.17.1",
+        "firebase-admin": "^11.5.0",
+        "lodash": "^4.17.21",
+        "nodemon": "^2.0.20",
+        "parcel": "^2.8.3",
+        "typescript": "^4.9.5",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "assert": "^2.0.0",
+        "browserify-zlib": "^0.2.0",
+        "buffer": "^5.7.1",
+        "concurrently": "^7.6.0",
+        "crypto-browserify": "^3.12.0",
+        "events": "^3.3.0",
+        "https-browserify": "^1.0.0",
+        "os-browserify": "^0.3.0",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10",
+        "punycode": "^1.4.1",
+        "querystring-es3": "^0.2.1",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "url": "^0.11.0",
+        "util": "^0.12.5"
+    }
+}

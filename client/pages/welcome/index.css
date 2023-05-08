@@ -1,0 +1,145 @@
+.root-welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    min-width: 375px;
+    padding: 20px 30px;
+}
+
+@media(min-width: 515px) {
+    .root-welcome {
+        height: inherit;
+        border: solid 4px #000;
+        border-radius: 6px;
+        padding: 20px 10px;
+    }
+}
+
+@media(min-width: 605px) {
+    .root-welcome {
+        padding: 20px 30px;
+    }
+}
+
+@media(min-width: 952px) {
+    .root-welcome {
+        height: inherit;
+        gap: 16px;
+        padding: 15px 95px;
+    }
+}
+
+@media(min-width: 1083px) {
+    .root-welcome {
+        height: inherit;
+        gap: 36px;
+        padding: 15px 95px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .root-welcome {
+        gap: 26px;
+        height: inherit;
+        padding: 15px 95px;
+        border: solid 6px #000;
+        border-radius: 6px;
+    }
+}
+
+.text-welcome {
+    display: flex;
+    align-items: center;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+@media(min-width: 952px) {
+    .text-welcome {
+        align-self: center;
+    }
+}
+
+.img-welcome {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+}
+
+@media(min-width: 1150px) {
+    .img-welcome {
+        visibility: hidden;
+        margin-bottom: 46px;
+    }
+}
+
+.container_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@media(min-width: 1150px) {
+    .container_buttons {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 8px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .button-continueGame {
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media(min-width: 1150px) {
+    .button-initName {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+@media(min-width: 1150px) {
+    .button-initRoom {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 7px 20px;
+    border: solid 1px #000;
+    border-radius: 6px;
+}
+
+@media(min-width: 1150px) {
+    .container-info {
+        margin-top: 34px;
+        background-color: rgb(188, 229, 244);
+        opacity: 0.9;
+    }
+}
+
+.text-info {
+    text-align: center;
+}
+
+@media(min-width: 1150px) {
+    .button-return {
+        align-self: center;
+        width: 70%;
+    }
+}

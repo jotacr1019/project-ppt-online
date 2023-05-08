@@ -1,0 +1,247 @@
+.initName-root {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100vh;
+    min-width: 375px;
+    padding: 20px 30px;
+}
+
+@media(min-width: 510px) {
+    .initName-root {
+        height: inherit;
+        padding: 20px 55px;
+        border: solid 4px #000;
+        border-radius: 6px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .initName-root {
+        gap: 10px;
+        height: inherit;
+        padding: 15px 95px;
+        border: solid 6px #000;
+        border-radius: 6px;
+    }
+}
+
+.text-initName {
+    display: flex;
+    align-items: center;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.img-initName {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+}
+
+@media(min-width: 1150px) {
+    .img-initName {
+        visibility: hidden;
+    }
+}
+
+.form {
+    margin-bottom: 8px;
+    width: 95%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+@media(min-width: 620px) {
+    .form {
+        width: 84%;
+    }
+}
+
+@media(min-width: 1150px) {
+    .form {
+        margin-bottom: 0px;
+    }
+}
+
+.label-form {
+    font-family: 'Odibee Sans';
+    font-size: 2.2rem;
+    align-self: center;
+}
+
+@media(min-width: 1150px) {
+    .label-form {
+        visibility: hidden;
+    }
+}
+
+.input-form {
+    font-family: 'Odibee Sans';
+    font-size: 1.8rem;
+    height: 68px;
+    padding: 0 8px;
+    text-align: center;
+    color: var(--color-principal);
+    background-color: #e1f3f0;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+@media(min-width: 620px) {
+    .input-form {
+        font-size: 2rem;
+    }
+}
+
+.input-button {
+    font-family: 'Odibee Sans';
+    font-size: 2.2rem;
+    height: 70px;
+    margin-top: 8px;
+    color: #fff;
+    background-color: #006CFC;
+    border: none;
+    border-radius: 8px;
+}
+
+@media(min-width: 620px) {
+    .input-button {
+        font-size: 2rem;
+    }
+}
+
+.info-room {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    height: 100vh;
+    min-width: 375px;
+    padding: 20px 30px;
+}
+
+.container_info-room {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+    padding: 7px 20px;
+    border: solid 1px #000;
+    border-radius: 6px;
+}
+
+@media(min-width: 1150px) {
+    .container_info-room {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 7px 20px;
+        margin-top: 110px;
+        border: solid 1px #000;
+        border-radius: 6px;
+        background-color: rgb(188, 229, 244);
+        opacity: 0.9;
+    }
+}
+
+.text_info-room {
+    text-align: center;
+}
+
+@media(min-width: 1150px) {
+    .button_info-room {
+        align-self: center;
+        width: 74%;
+    }
+}
+
+.text-name {
+    text-align: center;
+}
+
+.container_info-name {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 7px 20px;
+    margin-top: 2px;
+    border: solid 1px #000;
+    border-radius: 6px;
+}
+
+@media(min-width: 1150px) {
+    .container_info-name {
+        margin-top: 62px;
+        background-color: rgb(188, 229, 244);
+        opacity: 0.9;
+    }
+}
+
+.container-buttons-2 {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 6px;
+}
+
+@media(min-width: 850px) {
+    .container-buttons-2 {
+        padding: 0 40px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .container-buttons-2 {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media(min-width: 1150px) {
+    .button-continue {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+@media(min-width: 1150px) {
+    .button-return {
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.container_no-name {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 7px 20px;
+    border: solid 1px #000;
+    border-radius: 6px;
+}
+
+@media(min-width: 1150px) {
+    .container_no-name {
+        margin-top: 70px;
+        background-color: rgb(188, 229, 244);
+        opacity: 0.9;
+    }
+}
+
+.text_no-name {
+    text-align: center;
+}
+
+@media(min-width: 1150px) {
+    .button_no-name {
+        align-self: center;
+        width: 70%;
+    }
+}
