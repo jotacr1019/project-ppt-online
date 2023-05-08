@@ -9,11 +9,11 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "parcel": "parcel serve ./client/index.html --port 1238",
         "build:front": "parcel build ./client/index.html --dist-dir build --public-url ./",
-        "nodemon": "nodemon --watch 'server/index.ts' --exec 'ts-node server/index.ts'",
+        "nodemon": "nodemon --watch './server/index.ts' --exec 'ts-node ./server/index.ts'",
         "dev": "concurrently --kill-others \"npm run nodemon\" \"npm run parcel\"",
-        "build:api": "tsc server/index.ts",
+        "build:api": "tsc ./server/index.ts",
         "build": "npm run build:front && npm run build:api",
-        "start": "node index.js"
+        "start": "node ./server/index.js"
     },
     "keywords": [],
     "author": "",
