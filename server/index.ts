@@ -1,6 +1,7 @@
 import { json, response } from "express"
 import { firestore, rtdb } from "./db"
-import { v4 as uuidv4 } from 'uuid';           
+import { v4 as uuidv4 } from 'uuid';  
+import * as dotenv from 'dotenv';         
 const express = require('express')
 let myApp = express()
 let router = express.Router()
@@ -12,6 +13,7 @@ myApp.use(bodyParser.urlencoded({ extended: true }))
 myApp.use(bodyParser.json())
 myApp.use(cors())   
 // myApp.use(express.static('dist'))
+dotenv.config()
 
 let port = process.env.PORT || 9000
 
