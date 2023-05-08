@@ -1,6 +1,7 @@
 import { getDatabase, ref, onValue, set } from "firebase/database"
 import { rtdbFirebase } from "./rtdb"
-const API_BASE_URL = 'http://localhost:9000'
+// const API_BASE_URL = 'http://localhost:9000'
+const API_BASE_URL = 'https://ppt-juego-online.onrender.com'
 
 type Plays = "rock" | "paper" | "scissors" | "null";
 
