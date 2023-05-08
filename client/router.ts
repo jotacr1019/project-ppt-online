@@ -8,7 +8,7 @@ import { initRules } from "./pages/rules/index"
 import { initPlays } from "./pages/play/index"
 import { initResults } from "./pages/results/index"
 
-const BASE_PATH = "/Proyecto-final-mod5-game";
+const BASE_PATH = "/project-ppt-online";
 
 function isGithubPages() {
     return location.host.includes("github.io");
