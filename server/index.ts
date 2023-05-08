@@ -11,7 +11,7 @@ let bodyParser = require('body-parser')
 myApp.use(bodyParser.urlencoded({ extended: true }))
 myApp.use(bodyParser.json())
 myApp.use(cors())   
-myApp.use(express.static('dist'))
+// myApp.use(express.static('dist'))
 
 let port = process.env.PORT || 9000
 
@@ -259,6 +259,7 @@ router.get('*', (req,res)=>{
 })
 
 myApp.use('/api', router)
+myApp.use(express.static('dist'))
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)
