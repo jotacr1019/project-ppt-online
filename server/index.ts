@@ -23,7 +23,7 @@ const roomsCollection = firestore.collection("rooms");
 
 // signup
 
-myApp.post('/signup', function(req,res){
+router.post('/signup', function(req,res){
     const name = req.body.name;
     userCollection.where('name','==',name).get().then((response)=>{
         if (response.empty){
@@ -44,7 +44,7 @@ myApp.post('/signup', function(req,res){
 
 // auth
 
-myApp.post("/auth", function(req,res){
+router.post("/auth", function(req,res){
     const {name} = req.body;
     userCollection.where('name', '==', name).get().then((response)=>{
         if (response.empty){
@@ -67,7 +67,7 @@ myApp.post("/auth", function(req,res){
 
 // auth users in rooms
 
-myApp.get('/authUsers/:rtdbRoomId', (req, res) => {
+router.get('/authUsers/:rtdbRoomId', (req, res) => {
     const rtdbRoomId = req.params.rtdbRoomId;
     const { userId } = req.query;
     const roomsCollection = firestore.collection("rooms");
@@ -99,7 +99,7 @@ myApp.get('/authUsers/:rtdbRoomId', (req, res) => {
 
 // create room
 
-myApp.post("/rooms", function(req,res){
+router.post("/rooms", function(req,res){
     const {userId} = req.body;
     userCollection.doc(userId.toString()).get().then((doc)=>{ 
         if(doc.exists){
@@ -151,7 +151,7 @@ myApp.post("/rooms", function(req,res){
 
 // get room
 
-myApp.get("/rooms/:roomId", function(req,res){
+router.get("/rooms/:roomId", function(req,res){
     const {roomId} = req.params;
     roomsCollection.doc(roomId).get().then((snap)=>{
         if(snap.exists){
@@ -167,7 +167,7 @@ myApp.get("/rooms/:roomId", function(req,res){
 
 // plays in History
 
-myApp.post('/playsInHistory', async function(req,res){
+router.post('/playsInHistory', async function(req,res){
     const currentGame = req.body.currentGame;
     const longRoomId = req.body.longRoomId;
     const roomRef = await roomsCollection.where('rtdbRoomId','==',longRoomId).get();
@@ -190,7 +190,7 @@ myApp.post('/playsInHistory', async function(req,res){
 
 // set Id
 
-myApp.patch('/setId', async function(req,res){
+router.patch('/setId', async function(req,res){
     const longRoomId = req.body.longRoomId;
     const userId = req.body.playerTwoId
     const roomRef = await roomsCollection.where('rtdbRoomId','==',longRoomId).get();
@@ -213,7 +213,7 @@ myApp.patch('/setId', async function(req,res){
 
 // update score
 
-myApp.post('/updateScore', async function(req, res) {
+router.post('/updateScore', async function(req, res) {
     const longRoomId = req.body.longRoomId;
     const player = req.body.player;
     const scoreToAdd = req.body.scoreToAdd;
@@ -238,7 +238,7 @@ myApp.post('/updateScore', async function(req, res) {
 
 // get score
 
-myApp.get('/score/:rtdbRoomId', (req, res) => {
+router.get('/score/:rtdbRoomId', (req, res) => {
     const rtdbRoomId = req.params.rtdbRoomId;
     const roomsCollection = firestore.collection("rooms");
     const query = roomsCollection.where('rtdbRoomId', '==', rtdbRoomId).get()
@@ -257,16 +257,16 @@ myApp.get('/score/:rtdbRoomId', (req, res) => {
     });
 });
 
-// myApp.get("*", (req,res)=>{
+// router.get("*", (req,res)=>{
 //     res.sendFile(__dirname + '../dist/index.html')
 // })
 
 myApp.use(express.static('dist'))
-myApp.get("*", (req, res) => {
+router.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
-// myApp.use('/api', router)
+myApp.use('/api', router)
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)
