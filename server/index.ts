@@ -1,6 +1,7 @@
 import { json, response } from "express"
 import { firestore, rtdb } from "./db"
-import { v4 as uuidv4 } from 'uuid';  
+import { v4 as uuidv4 } from 'uuid';
+import * as path from 'path';  
 import * as dotenv from 'dotenv';         
 const express = require('express')
 let myApp = express()
@@ -256,12 +257,16 @@ router.get('/score/:rtdbRoomId', (req, res) => {
     });
 });
 
-router.get("*", (req,res)=>{
-    res.sendFile(__dirname + '../../dist/index.html')
-})
+// router.get("*", (req,res)=>{
+//     res.sendFile(__dirname + '../dist/index.html')
+// })
+
+router.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../dist/index.html"));
+});
 
 myApp.use('/api', router)
-myApp.use(express.static('../../dist'))
+myApp.use(express.static('dist'))
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)

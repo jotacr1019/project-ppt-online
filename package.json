@@ -1,7 +1,11 @@
 {
     "name": "project-mod-6",
     "version": "1.0.0",
-    "description": "",
+    "repository": "https://github.com/jotacr1019/project-ppt-online",
+    "author": "José J. Fernáńdez",
+    "description": "Juego piedra, papel o tijera",
+    "keywords": [],
+    "license": "ISC",
     "resolutions": {
         "parcel-bundler": "^2.0.0 || ^1.12.5"
     },
@@ -15,9 +19,6 @@
         "build": "npm run build:front && npm run build:api",
         "start": "node ./server/index.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
     "dependencies": {
         "@types/node": "^18.15.2",
         "body-parser": "^1.20.2",
