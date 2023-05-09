@@ -257,11 +257,11 @@ router.get('/score/:rtdbRoomId', (req, res) => {
 });
 
 router.get("*", (req,res)=>{
-    res.sendFile(__dirname + '../dist/index.html')
+    res.sendFile(__dirname + '../../dist/index.html')
 })
 
 myApp.use('/api', router)
-myApp.use(express.static('../dist'))
+myApp.use(express.static('../../dist'))
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)
