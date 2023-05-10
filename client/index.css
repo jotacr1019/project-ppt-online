@@ -44,8 +44,8 @@ body {
         border-right: solid 35px #000;
         border-left: solid 35px #000;
         background-image: url(./assets/wp8121942.png);
-        /* background-position-y: -110; */
-        -webkit-background-image: url(./assets/wp8121942.png);
-        background-position: center -110px;
+        background-position-y: -110;
+        /* -webkit-background-image: url(./assets/wp8121942.png);
+        background-position: center -110px; */
     }
 }
