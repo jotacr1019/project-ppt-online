@@ -1,4 +1,4 @@
-import { json, response } from "express"
+// import { json, response } from "express"
 import { firestore, rtdb } from "./db"
 import { v4 as uuidv4 } from 'uuid';
 import * as path from 'path';  
@@ -262,10 +262,10 @@ router.get('/score/:rtdbRoomId', (req, res) => {
 //     res.sendFile(__dirname + '../dist/index.html')
 // })
 
+myApp.use(express.static('dist'))
 router.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
-myApp.use(express.static('dist'))
 
 myApp.use('/api', router)
 
