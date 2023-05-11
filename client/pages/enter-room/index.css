@@ -16,6 +16,13 @@
     }
 }
 
+@media(min-width: 510px) {
+    .initRoom-root {
+        gap: 26px;
+        border: solid 6px #000;
+    }
+}
+
 .text-initRoom {
     display: flex;
     align-items: center;
@@ -51,6 +58,14 @@
     .form-room {
         width: 84%;
         margin-bottom: 0px;
+        margin-top: -10px;
+    }
+}
+
+@media(min-width: 1150px) {
+    .form-room {
+        width: 84%;
+        margin-bottom: 16px;
         margin-top: -10px;
     }
 }

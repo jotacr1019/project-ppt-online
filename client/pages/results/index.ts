@@ -4,11 +4,8 @@ import "../../components/label-results/index"
 import { state } from "../../state"
 
 
-state.setStartOfPlayerOneInRTDB(false)
-state.setStartOfPlayerTwoInRTDB(false)
 
 export function initResults (params){
-
     const div = document.createElement("div");
 
     const currentState = state.getState();
@@ -65,6 +62,8 @@ export function initResults (params){
                 params.goTo("/reglas")
             }
         })
+        state.setStartOfPlayerOneInRTDB(false)
+        state.setStartOfPlayerTwoInRTDB(false)
     }
 
 

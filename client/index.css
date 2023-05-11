@@ -11,41 +11,69 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Lora', serif;
-    font-family: 'Odibee Sans', cursive;
-    margin: 0;
-    background-color: #e1f3f0;
-    background-image: url(./assets/fondo.png);
-}
-
-@media(min-width: 515px) {
-    body {
-        height: 100vh;
-        padding: 15px 20px;
+@media(min-width: 800px) {
+    html {
         border-right: solid 35px #000;
         border-left: solid 35px #000;
     }
 }
 
-@media(min-width: 760px) {
+body {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    margin: 0 auto;
+    width: 375px;
+    /*  */
+    font-family: 'Lora', serif;
+    font-family: 'Odibee Sans', cursive;
+    min-width: 375px;
+    /* margin: 0; */
+    background-color: #e1f3f0;
+    background-image: url(./assets/fondo.png);
+}
+
+@media(min-width: 520px) {
     body {
         height: 100vh;
-        padding: 15px 100px;
-        border-right: solid 35px #000;
-        border-left: solid 35px #000;
+        width: 490px;
+        /* padding: 15px 20px; */
+        padding: 44px 0px;
+        margin: 0 auto;
+        /* border-right: solid 35px #000; */
+        /* border-left: solid 35px #000; */
+    }
+}
+
+@media(min-width: 800px) {
+    body {
+        height: 100vh;
+        width: 590px;
+        /* padding: 15px 100px; */
+        padding: 44px 0px;
+        /* border-right: solid 35px #000;
+        border-left: solid 35px #000; */
+    }
+}
+
+@media(min-width: 952px) {
+    body {
+        height: 100vh;
+        width: 690px;
+        padding: 35px 0px;
+        /* border-right: solid 35px #000;
+        border-left: solid 35px #000; */
     }
 }
 
 @media(min-width: 1150px) {
     body {
         height: 100vh;
-        padding: 20px 285px;
-        border-right: solid 35px #000;
-        border-left: solid 35px #000;
+        /* padding: 20px 285px; */
+        padding: 22px 0px;
+        /* border-right: solid 35px #000;
+        border-left: solid 35px #000; */
         background-image: url(./assets/wp8121942.png);
         background-position-y: -110;
-        /* -webkit-background-image: url(./assets/wp8121942.png);
-        background-position: center -110px; */
     }
 }
