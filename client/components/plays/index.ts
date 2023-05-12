@@ -1,6 +1,6 @@
-const paperImage = require("url:../../../client/assets/Untitled-paper.png")
-const rockImage = require("url:../../../client/assets/Untitled-rock.png")
-const scissorsImage = require("url:../../../client/assets/Untitled-scissors.png")
+const scissorsImage = require("url:../../../client/assets/scissors2.png")
+const paperImage = require("url:../../../client/assets/paper2.png")
+const rockImage = require("url:../../../client/assets/rock2.png")
 import { state } from "../../state";
 
 export class Plays extends HTMLElement {

@@ -1,7 +1,7 @@
 .initRoom-root {
     display: flex;
     flex-direction: column;
-    gap: 65px;
+    gap: 55px;
     height: 95vh;
     min-width: 375px;
     padding: 35px 30px;
@@ -135,7 +135,6 @@
     .container_no-code {
         align-self: center;
         width: 84%;
-        background-color: rgb(188, 229, 244);
         opacity: 0.9;
     }
 }
@@ -149,8 +148,9 @@
 
 @media(min-width: 1150px) {
     .container_no-code {
-        margin-top: 25px;
-        margin-bottom: 6px;
+        margin-top: 32px;
+        margin-bottom: 34px;
+        background-color: rgb(188, 229, 244);
     }
 }
 

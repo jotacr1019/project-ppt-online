@@ -3,32 +3,41 @@
     flex-direction: column;
     gap: 120px;
     min-width: 375px;
-    height: 100vh;
+    height: 95vh;
     padding: 30px 30px;
 }
 
-@media(min-width: 515px) {
+@media(min-width: 520px) {
     .root-share_code {
         height: inherit;
-        gap: 88px;
+        gap: 92px;
         border: solid 4px #000;
         border-radius: 6px;
-        padding: 20px 20px;
+        padding: 20px 40px;
     }
 }
 
-@media(min-width: 805px) {
+@media(min-width: 800px) {
     .root-share_code {
-        padding: 20px 30px;
+        height: inherit;
+        gap: 92px;
+        padding: 20px 60px;
+    }
+}
+
+@media(min-width: 952px) {
+    .root-share_code {
+        height: inherit;
+        gap: 92px;
+        padding: 20px 70px 32px;
     }
 }
 
 @media(min-width: 1150px) {
     .root-share_code {
-        gap: 322px;
+        gap: 332px;
         height: inherit;
-        padding: 15px 95px;
+        padding: 25px 95px 38px;
         border: solid 6px #000;
-        border-radius: 6px;
     }
 }

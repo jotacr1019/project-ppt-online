@@ -65,3 +65,7 @@ body {
         background-position-y: -110;
     }
 }
+
+.principal-container {
+    width: 100%;
+}

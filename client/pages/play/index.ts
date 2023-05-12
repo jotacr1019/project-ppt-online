@@ -13,7 +13,7 @@ export function initPlays (params){
     if(currentState.userId === currentState.rtdbData.currentGame.playerOne.userId){
         const div = document.createElement("div");
         div.innerHTML = `
-            <div class="container">
+            <div class="container-counter">
                 <custom-counter count="3" class="counter"></custom-counter>
             </div>
             <div class="progress-bar"></div>
@@ -215,7 +215,7 @@ export function initPlays (params){
             const intervalInside = setInterval(function(){
                 let newCountInside = newNumberForCount - 1;
                 newNumberForCount = newCountInside;
-                if(newNumberForCount <= 0){
+                if(newNumberForCount <= -48){
                     timerToRederect()
                     clearInterval(intervalInside)
                 }
@@ -228,7 +228,7 @@ export function initPlays (params){
     if(currentState.userId === currentState.rtdbData.currentGame.playerTwo.userId){
         const div = document.createElement("div");
         div.innerHTML = `
-            <div class="container">
+            <div class="container-counter">
                 <custom-counter count="3" class="counter"></custom-counter>
             </div>
             <div class="progress-bar"></div>
@@ -420,7 +420,7 @@ export function initPlays (params){
             const intervalInside = setInterval(function(){
                 let newCountInside = newNumberForCount - 1;
                 newNumberForCount = newCountInside;
-                if(newNumberForCount <= 0){
+                if(newNumberForCount <= -48){
                     timerToRederect()
                     clearInterval(intervalInside)
                 }
