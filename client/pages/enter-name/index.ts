@@ -9,7 +9,7 @@ export function initStartName (params){
     const lastState = state.getState()
 
     div.innerHTML = `
-        <custom-text class="text-initName" variant="title">Piedra, Papel o Tijera</custom-text>
+        <custom-text class="text-initName" variant="title" font-size="3.6rem">Piedra, Papel o Tijera</custom-text>
         <img class="img-initName" src="${imgOfGame}" alt="imagen-juego-ppt">
         <Form class="form">
             <label class="label-form">Tu nombre</label>
@@ -55,7 +55,7 @@ export function initStartName (params){
                     })
                 } else {
                     div.innerHTML = `
-                        <custom-text class="text-initName" variant="title" font-size="3.1rem">Piedra, Papel o Tijera</custom-text>
+                        <custom-text class="text-initName text_info-room" variant="title" font-size="3.1rem">Piedra, Papel o Tijera</custom-text>
                         <img class="img-initName" src="${imgOfGame}" alt="imagen-juego-ppt">
                         <div class="container_info-room">
                             <custom-text class="text_info-room" variant="normal-short">La sala '${lastState.roomId}' no existe! Asegúrate de introducir correctamente el id de la sala, o puedes iniciar un nuevo juego</custom-text>
@@ -78,7 +78,7 @@ export function initStartName (params){
                     })
                 } else {
                     div.innerHTML = `
-                        <custom-text class="text-initName" variant="title" font-size="3.8rem">Piedra, Papel o Tijera</custom-text>
+                        <custom-text class="text-initName text_info-name" variant="title" font-size="3.1rem">Piedra, Papel o Tijera</custom-text>
                         <img class="img-initName" src="${imgOfGame}" alt="imagen-juego-ppt">
                         <div class="container_info-name">
                             <custom-text class="text-name" variant="normal-short">El usuario '${capitalizedName}' ya existe, deseas continuar con este usuario?</custom-text>
@@ -106,8 +106,8 @@ export function initStartName (params){
             });
         } else {
             div.innerHTML = `
-                <custom-text class="text-initName" variant="title" font-size="4.4rem">Piedra, Papel o Tijera</custom-text>
-                <img class="img-initName" src="${imgOfGame}" alt="imagen-juego-ppt">
+                <custom-text class="text-initName" variant="title" font-size="3.4rem">Piedra, Papel o Tijera</custom-text>
+                <img class="img-initName img_no-name" src="${imgOfGame}" alt="imagen-juego-ppt">
                 <div class="container_no-name">
                     <custom-text class="text_no-name" variant="normal-short">Favor ingresar un nombre para jugar</custom-text>
                     <custom-button class="button_no-name" label="Entendido"></custom-button>

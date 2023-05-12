@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 100vh;
+    height: 95vh;
     min-width: 375px;
-    padding: 20px 30px;
+    padding: 10px 30px;
 }
 
 @media(min-width: 520px) {
@@ -14,7 +14,6 @@
         border: solid 4px #000;
         border-radius: 6px;
         padding: 20px 30px;
-        /* padding: 20px 30px; */
     }
 }
 
@@ -32,15 +31,6 @@
         padding: 20px 100px;
     }
 }
-
-
-/* @media(min-width: 1083px) {
-    .root-welcome {
-        height: inherit;
-        gap: 36px;
-        padding: 15px 95px;
-    }
-} */
 
 @media(min-width: 1150px) {
     .root-welcome {
@@ -132,7 +122,6 @@
 
 @media(min-width: 1150px) {
     .container-info {
-        /* margin-top: 34px; */
         margin-top: -92px;
         background-color: rgb(188, 229, 244);
         opacity: 0.9;

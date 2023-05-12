@@ -8,7 +8,7 @@ export function initStartRoom (params){
     const div = document.createElement("div");
 
     div.innerHTML = `
-        <custom-text class="text-initRoom" variant="title">Piedra, Papel o Tijera</custom-text>
+        <custom-text class="text-initRoom" variant="title" font-size="3.6rem">Piedra, Papel o Tijera</custom-text>
         <img class="img-initRoom" src="${imgOfGame}" alt="imagen-juego-ppt">
         <Form class="form-room">
             <input class="input_form-room" type="text" name="text" placeholder="Código"></input>
@@ -27,8 +27,8 @@ export function initStartRoom (params){
             params.goTo("/ingresar-nombre")
         } else {
             div.innerHTML = `
-                <custom-text class="text-initRoom" variant="title">Piedra, Papel o Tijera</custom-text>
-                <img class="img-initRoom" src="${imgOfGame}" alt="imagen-juego-ppt">
+                <custom-text class="text-initRoom" variant="title" font-size="3.1rem">Piedra, Papel o Tijera</custom-text>
+                <img class="img-initRoom img_no-code" src="${imgOfGame}" alt="imagen-juego-ppt">
                 <div class="container_no-code">
                     <custom-text class="text-info" variant="normal-short">Favor ingresar un código válido para jugar</custom-text>
                     <custom-button class="button-info" label="Entendido"></custom-button>
