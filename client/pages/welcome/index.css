@@ -9,7 +9,6 @@
 
 @media(min-width: 520px) {
     .root-welcome {
-        /*  */
         height: inherit;
         border: solid 4px #000;
         border-radius: 6px;

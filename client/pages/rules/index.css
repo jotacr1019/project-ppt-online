@@ -50,12 +50,6 @@
     text-align: center;
 }
 
-@media(min-width: 520px) {
-    .text-rules {
-        /* width: 110%; */
-    }
-}
-
 @media(min-width: 1150px) {
     .text-rules {
         background-color: rgb(188, 229, 244);

@@ -1,26 +1,33 @@
 .root-waiting_room {
     display: flex;
     flex-direction: column;
-    gap: 140px;
+    gap: 130px;
     min-width: 375px;
-    height: 100vh;
+    height: 95vh;
     padding: 30px 30px;
 }
 
-@media(min-width: 515px) {
+@media(min-width: 520px) {
     .root-waiting_room {
         height: inherit;
-        gap: 100px;
+        gap: 102px;
         border: solid 4px #000;
         border-radius: 6px;
-        padding: 20px 10px;
+        padding: 20px 30px 40px;
     }
 }
 
-@media(min-width: 605px) {
+@media(min-width: 800px) {
     .root-waiting_room {
-        gap: 95px;
-        padding: 20px 30px;
+        gap: 110px;
+        padding: 20px 60px 30px;
+    }
+}
+
+@media(min-width: 952px) {
+    .root-waiting_room {
+        gap: 126px;
+        padding: 22px 80px 42px;
     }
 }
 
@@ -28,7 +35,7 @@
     .root-waiting_room {
         gap: 330px;
         height: inherit;
-        padding: 15px 95px;
+        padding: 20px 65px 58px;
         border: solid 6px #000;
         border-radius: 6px;
     }

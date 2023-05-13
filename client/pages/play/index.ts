@@ -215,7 +215,7 @@ export function initPlays (params){
             const intervalInside = setInterval(function(){
                 let newCountInside = newNumberForCount - 1;
                 newNumberForCount = newCountInside;
-                if(newNumberForCount <= -48){
+                if(newNumberForCount <= 0){
                     timerToRederect()
                     clearInterval(intervalInside)
                 }
@@ -420,7 +420,7 @@ export function initPlays (params){
             const intervalInside = setInterval(function(){
                 let newCountInside = newNumberForCount - 1;
                 newNumberForCount = newCountInside;
-                if(newNumberForCount <= -48){
+                if(newNumberForCount <= 0){
                     timerToRederect()
                     clearInterval(intervalInside)
                 }

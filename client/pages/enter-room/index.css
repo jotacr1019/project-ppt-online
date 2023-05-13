@@ -1,7 +1,7 @@
 .initRoom-root {
     display: flex;
     flex-direction: column;
-    gap: 55px;
+    gap: 35px;
     height: 95vh;
     min-width: 375px;
     padding: 35px 30px;
