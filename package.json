@@ -11,7 +11,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "parcel": "parcel serve ./client/index.html --port 1238",
+        "parcel": "parcel serve ./client/index.html --port 1241",
         "build:front": "parcel build ./client/index.html",
         "nodemon": "nodemon --watch './server/index.ts' --exec 'ts-node ./server/index.ts'",
         "dev": "concurrently --kill-others \"npm run nodemon\" \"npm run parcel\"",

@@ -262,8 +262,8 @@ router.get('/score/:rtdbRoomId', (req, res) => {
 //     res.sendFile(__dirname + '../dist/index.html')
 // })
 
-myApp.use(express.static('dist'))
-myApp.get("*", (req, res) => {
+router.use(express.static('dist'))
+router.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
