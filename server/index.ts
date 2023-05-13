@@ -2,8 +2,9 @@
 import { firestore, rtdb } from "./db"
 import { v4 as uuidv4 } from 'uuid';
 import * as path from 'path';  
-import * as dotenv from 'dotenv';         
 const express = require('express')
+import * as dotenv from 'dotenv';         
+dotenv.config()
 let myApp = express()
 let router = express.Router()
 let cors = require('cors')    
@@ -14,7 +15,6 @@ myApp.use(bodyParser.urlencoded({ extended: true }))
 myApp.use(bodyParser.json())
 myApp.use(cors())   
 // myApp.use(express.static('dist'))
-dotenv.config()
 
 let port = process.env.PORT || 9000
 
@@ -262,7 +262,7 @@ router.get('/score/:rtdbRoomId', (req, res) => {
 //     res.sendFile(__dirname + '../dist/index.html')
 // })
 
-router.use(express.static('dist'))
+myApp.use(express.static('dist'))
 router.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
