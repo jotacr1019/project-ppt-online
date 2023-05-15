@@ -262,7 +262,8 @@ myApp.get('/score/:rtdbRoomId', (req, res) => {
 //     res.sendFile(__dirname + '../dist/index.html')
 // })
 
-myApp.use(express.static(path.join(__dirname, 'dist')));
+// myApp.use(express.static(path.join(__dirname, 'dist')));
+myApp.use(express.static('dist'))
 // myApp.use('/api')
 myApp.get("*", (req,res)=>{
         res.sendFile(__dirname + '../dist/index.html')
