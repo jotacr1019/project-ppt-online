@@ -263,10 +263,10 @@ router.get('/score/:rtdbRoomId', (req, res) => {
 // })
 
 myApp.use(express.static(path.join(__dirname, 'dist')));
-router.get(/^\/(?!api).*/, (req, res) => {
+myApp.use('/api', router)
+myApp.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
+  });
 
 
 // myApp.use(express.static('dist'))
@@ -274,8 +274,7 @@ router.get(/^\/(?!api).*/, (req, res) => {
 // 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 // });
 
-// myApp.use(router);
-myApp.use('/api', router)
+// myApp.use('/api', router)
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)
