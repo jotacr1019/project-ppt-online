@@ -6,6 +6,7 @@ import { state } from "../../state"
 
 
 export function initResults (params){
+    console.log('initResults');
     const div = document.createElement("div");
 
     const currentState = state.getState();
@@ -68,6 +69,7 @@ export function initResults (params){
 
 
     if(currentState.userId === currentState.rtdbData.currentGame.playerTwo.userId){
+    console.log('playerTwo in initResults');
         if(resultInPlay === "p1Winner"){
             div.innerHTML = `
                 <custom-label-results label="Perdiste" background-color="var(--color-perdedor)"></custom-label-results>
