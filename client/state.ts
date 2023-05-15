@@ -181,7 +181,7 @@ const state = {
 
     async setPlaysInDBHistory(){
         const currentState = this.getState()
-        const response = await fetch(API_BASE_URL + '/api/playsInHistory', {
+        const response = await fetch(API_BASE_URL + '/playsInHistory', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -207,7 +207,7 @@ const state = {
 
     async setIdOfPlayerTwoInDB(){
         const currentState = this.getState()
-        const response = await fetch(API_BASE_URL + '/api/setId', {
+        const response = await fetch(API_BASE_URL + '/setId', {
             method: 'PATCH',
             headers: {
                 "content-type": "application/json"
@@ -306,7 +306,7 @@ const state = {
 
     async updateScoreInDB(player){
         const currentState = this.getState()
-        const response = await fetch(API_BASE_URL + '/api/updateScore', {
+        const response = await fetch(API_BASE_URL + '/updateScore', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -323,7 +323,7 @@ const state = {
 
     async getScoreFromDB() {
         const currentState = this.getState();
-        const response = await fetch(API_BASE_URL + "/api/score/" + currentState.longRoomId, {
+        const response = await fetch(API_BASE_URL + "/score/" + currentState.longRoomId, {
             method: 'GET',
         });
         const data = await response.json();
@@ -366,7 +366,7 @@ const state = {
     async authUser() {
         try {
             const currentState = this.getState();
-            const response = await fetch(API_BASE_URL + '/api/auth', {
+            const response = await fetch(API_BASE_URL + '/auth', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"
@@ -386,7 +386,7 @@ const state = {
     async authUserInRoom(){
         try {
             const currentState = this.getState();
-            const response = await fetch(API_BASE_URL + "/api/authUsers/" + currentState.longRoomId + "?userId=" + currentState.userId, {
+            const response = await fetch(API_BASE_URL + "/authUsers/" + currentState.longRoomId + "?userId=" + currentState.userId, {
                 method: 'GET',
             });
             if (response.status === 204) {
@@ -411,7 +411,7 @@ const state = {
     async createUserOneInDB(){
         try{
             const currentState = this.getState();
-            const response = await fetch(API_BASE_URL + '/api/signup', {
+            const response = await fetch(API_BASE_URL + '/signup', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"
@@ -439,7 +439,7 @@ const state = {
     async createUserTwoInDB(){
         try {
             const currentState = this.getState();
-            const response = await fetch(API_BASE_URL + '/api/signup', {
+            const response = await fetch(API_BASE_URL + '/signup', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"
@@ -477,7 +477,7 @@ const state = {
 
     async createRoom(){
         const currentState = this.getState()
-        const response = await fetch(API_BASE_URL + '/api/rooms', {
+        const response = await fetch(API_BASE_URL + '/rooms', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -516,7 +516,7 @@ const state = {
     async getRoom() {
         const currentState = this.getState();
         try {
-            const resp = await fetch(API_BASE_URL + "/api/rooms/" + currentState.roomId,
+            const resp = await fetch(API_BASE_URL + "/rooms/" + currentState.roomId,
                 { method: "GET" });
             if (resp.status === 401) {
                 throw new Error("Room doesn't exist");
