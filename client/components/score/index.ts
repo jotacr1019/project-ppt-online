@@ -6,8 +6,9 @@ export class Score extends HTMLElement {
     shadowDom = this.attachShadow({mode: "open"});
     constructor(){
         super();
-        this.render();
-        state.getScoreFromDB()
+        state.getScoreFromDB().then(()=>{
+            this.render();
+        })
     }
 
     connectedCallback(){
@@ -18,6 +19,8 @@ export class Score extends HTMLElement {
 
     render(){
         const currentState = state.getState()
+        console.log(currentState.scoreFromDB);
+        
         const playerOneName = currentState.rtdbData.currentGame.playerOne.name.slice(0, 10);
         const playerTwoName = currentState.rtdbData.currentGame.playerTwo.name.slice(0, 10);
 
