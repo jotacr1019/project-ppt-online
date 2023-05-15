@@ -66,11 +66,11 @@ export function initPlays (params){
                         currentState.playRoomInitialized){
                             const resultOfWhoWins = state.whoWins(value.currentGame.playerOne.choice, value.currentGame.playerTwo.choice)
                             
-                            // const div = document.querySelector(".root-play");
-                            // if (div && div.parentNode) {
-                            //     div.parentNode.removeChild(div);
-                            // }
-                            // createDiv()
+                            const div = document.querySelector(".root-play");
+                            if (div && div.parentNode) {
+                                div.parentNode.removeChild(div);
+                            }
+                            createDiv()
 
                             if(resultOfWhoWins?.includes("p1Winner") || resultOfWhoWins?.includes("p2Winner") || resultOfWhoWins?.includes("tied")){
                                 state.setPlaysInDBHistory()
@@ -85,12 +85,6 @@ export function initPlays (params){
                                 currentState.playRoomInitialized = false;
                                 state.setState(currentState);
                             }
-
-                            const div = document.querySelector(".root-play");
-                            if (div && div.parentNode) {
-                                div.parentNode.removeChild(div);
-                            }
-                            createDiv()
                         } else if (value.currentGame.playerTwo.choice === "null"){
                             params.goTo("/reglas")
                         }
