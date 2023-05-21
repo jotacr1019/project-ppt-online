@@ -1,6 +1,6 @@
 ## Piedra, papel o tijera - juego online
 
-# Proyecto de la carrera "Software Developer" de APX School.
+Proyecto de la carrera "Software Developer" de APX School.
 
 :computer: [App demo](https://ppt-juego-online.onrender.com)
 
