@@ -1,20 +1,18 @@
-// import { json, response } from "express"
 import { firestore, rtdb } from "./db"
 import { v4 as uuidv4 } from 'uuid';
 import * as path from 'path';  
-const express = require('express')
+import * as express from 'express'; 
 import * as dotenv from 'dotenv';         
 dotenv.config()
-let myApp = express()
-// let router = express.Router()
-let cors = require('cors')    
-let bodyParser = require('body-parser') 
 
+
+let bodyParser = require('body-parser') 
+let cors = require('cors')    
+let myApp = express()
 
 myApp.use(bodyParser.urlencoded({ extended: true }))
 myApp.use(bodyParser.json())
-myApp.use(cors())   
-// myApp.use(express.static('dist'))
+myApp.use(cors())
 
 let port = process.env.PORT || 9000
 
@@ -87,7 +85,7 @@ myApp.get('/authUsers/:rtdbRoomId', (req, res) => {
                 }
             } 
             else {
-                res.status(204).send('No existe playerTwoId!');
+                res.status(204).send("There isn't a playerTwoId in the room yet");
             }
         }
     })
@@ -257,29 +255,11 @@ myApp.get('/score/:rtdbRoomId', (req, res) => {
     });
 });
 
-
-// router.get("*", (req,res)=>{
-//     res.sendFile(__dirname + '../dist/index.html')
-// })
-
-// myApp.use(express.static(path.join(__dirname, 'dist')));
 myApp.use(express.static('dist'))
-// myApp.use('/api')
+
 myApp.get("*", (req,res)=>{
-        // res.sendFile(__dirname + '../dist/index.html')
 	res.sendFile(path.join(__dirname, "../dist/index.html"));
 })
-// myApp.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-//   });
-
-
-// myApp.use(express.static('dist'))
-// router.get("*", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "../dist/index.html"));
-// });
-
-// myApp.use('/api', router)
 
 myApp.listen(port)
 console.log('API escuchando en el puerto ' + port)
